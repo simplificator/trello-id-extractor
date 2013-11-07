@@ -43,7 +43,7 @@
       }
       $el = $("<span>").attr({
         "class": "visible-card-id"
-      }).text(cardId).append(" ");
+      }).text("#" + cardId.toUpperCase()).append(" ");
       return $(card).find("a.list-card-title").prepend($el);
     };
 
@@ -68,7 +68,7 @@
       }
       $el = $("<span>").attr({
         "class": "visible-card-id"
-      }).text(cardId).append(" ");
+      }).text("#" + cardId.toUpperCase()).append(" ");
       return $(".card-detail-title h2").prepend($el);
     };
 

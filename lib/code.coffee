@@ -22,7 +22,7 @@ class TrelloIdExtractor
     cardId = @parseBoardCardId(card)
     return unless cardId?
     return if $(card).find(".visible-card-id").length > 0
-    $el = $("<span>").attr(class: "visible-card-id").text(cardId).append(" ")
+    $el = $("<span>").attr(class: "visible-card-id").text("#" + cardId.toUpperCase()).append(" ")
     $(card).find("a.list-card-title").prepend($el)
 
   # - - -
@@ -35,7 +35,7 @@ class TrelloIdExtractor
     cardId = @parseCurrentCardId()
     return unless cardId?
     return if $(".card-detail-title").find(".visible-card-id").length > 0
-    $el = $("<span>").attr(class: "visible-card-id").text(cardId).append(" ")
+    $el = $("<span>").attr(class: "visible-card-id").text("#" + cardId.toUpperCase()).append(" ")
     $(".card-detail-title h2").prepend($el)
 
 $ ->
