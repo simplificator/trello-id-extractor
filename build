@@ -1,2 +1,2 @@
 #!/bin/sh
-coffee -o dist/ -c lib/code.coffee
+coffee -b -o dist/ -c lib/code.coffee
